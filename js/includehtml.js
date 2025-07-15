@@ -1,6 +1,6 @@
 function getBaseUrl(url) {
     var result = url.hostname;
-    if (result.includes("github") && url.href.search("Enots-Dream-AU") == -1) {
+    if (result.search("github") != -1 && url.href.search("Enots-Dream-AU") == -1) {
         result += "Enots-Dream-AU";
     }
     return result + url.href.splice(url.hostname.length + 3);

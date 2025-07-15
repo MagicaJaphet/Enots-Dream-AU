@@ -1,9 +1,9 @@
 function getBaseUrl(url) {
     var result = url.hostname;
-    if (result.includes("github") && !url.href.includes("Enots-Dream-AU")) {
+    if (result.includes("github") && !url.includes("Enots-Dream-AU")) {
         result += "Enots-Dream-AU";
     }
-    return result + url.href.splice(url.hostname.length + 3);
+    return result + url.splice(url.hostname.length + 3);
 }
 
 function fixURLs() {

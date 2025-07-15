@@ -28,3 +28,28 @@ function includeHTML() {
 }
 
 includeHTML();
+
+function getBaseUrl(url) {
+    var re = new RegExp(/^.*\//);
+    var result = re.exec(window.location.href);
+    if (result.includes("github")) {
+        result += "Enots-Dream-AU/";
+    }
+    return result + url;
+}
+
+function fixURLs() {
+  var z, i, elmnt, file;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("href");
+    if (file && file[0] == "/") {
+      z[i].href = getBaseUrl(file);
+    }
+  }
+}
+
+fixURLs();

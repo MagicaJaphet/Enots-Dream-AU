@@ -51,30 +51,3 @@
         <button type="button" class="title btn btn-dark disabled">Gallery</button>
     </div>
 </div>
-
-<script>
-function getBaseUrl() {
-    var re = new RegExp(/^.*\//);
-    var result = re.exec(window.location.href);
-    if (result.includes("github")) {
-        result += "Enots Dream AU/";
-    }
-    return result;
-}
-
-function fixURLs() {
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("href");
-    if (file) {
-      z[i].href = getBaseUrl(file);
-    }
-  }
-}
-
-fixURLs()
-</script>

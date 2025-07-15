@@ -6,7 +6,7 @@ function getBaseUrl(url) {
     if (result.includes("github")) {
         result += "Enots-Dream-AU";
     }
-    return result + url;
+    return result + url.splice(url.hostname.length);
 }
 
 function fixURLs() {

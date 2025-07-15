@@ -1,6 +1,8 @@
 function getBaseUrl(url) {
-    var re = new RegExp(/^.*\//);
-    var result = re.exec(window.location.href);
+    var result = url.hostname;
+    if (result.includes("character pages")) {
+      result.splice(result.indexOf("character pages"));
+    }
     if (result.includes("github")) {
         result += "Enots-Dream-AU";
     }

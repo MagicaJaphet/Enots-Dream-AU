@@ -2,7 +2,7 @@ function getBaseUrl(url) {
     var re = new RegExp(/^.*\//);
     var result = re.exec(window.location.href);
     if (result.includes("github")) {
-        result += "Enots-Dream-AU/";
+        result += "Enots-Dream-AU";
     }
     return result + url;
 }

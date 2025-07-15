@@ -1,6 +1,6 @@
 <div class="navbar bg-light mb-5">
     <div class="btn-group gap-1 mx-auto" role="group" aria-label="Home Buttons" data-bs-theme="dark">
-        <button type="button" class="title btn btn-dark"><a class="text-decoration-none" href="../">Home</a></button>
+        <button type="button" class="title btn btn-dark"><a class="text-decoration-none" href="/index.html">Home</a></button>
         <div class="btn-group dropdown-center" role="group">
             <button type="button" class="title btn btn-dark disabled">
                 Characters
@@ -10,7 +10,7 @@
             </button>
             <ul class="dropdown-menu overflow-y-auto">
                 <li><h1 class="dropdown-header">Slugcats</h6></li>
-                <li><a class="title dropdown-item" href="../character pages/The Messenger.html">The Messenger</a></li>
+                <li><a class="title dropdown-item" href="/character pages/The Messenger.html">The Messenger</a></li>
                 <li><a class="title dropdown-item disabled" href="">The Artificer</a></li>
                 <li><a class="title dropdown-item disabled" href="">The Dreamer</a></li>
                 <li><a class="title dropdown-item disabled" href="">The Hunter</a></li>
@@ -51,3 +51,30 @@
         <button type="button" class="title btn btn-dark disabled">Gallery</button>
     </div>
 </div>
+
+<script>
+function getBaseUrl() {
+    var re = new RegExp(/^.*\//);
+    var result = re.exec(window.location.href);
+    if (result.includes("github")) {
+        result += "Enots Dream AU/";
+    }
+    return result;
+}
+
+function fixURLs() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("href");
+    if (file) {
+      z[i].href = getBaseUrl(file);
+    }
+  }
+}
+
+fixURLs()
+</script>

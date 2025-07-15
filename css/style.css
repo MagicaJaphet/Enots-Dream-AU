@@ -1,0 +1,17 @@
+body {
+    background-color: #4f6d9e;
+    font-family: "Consolas", 'Courier New', Courier, monospace !important;
+    font-size: medium;
+}
+.title {
+    font-family: "Raindondo", 'Courier New', Courier, monospace !important;
+}
+
+.header {
+    color: #102952;
+    font-size: 8vw;
+    -webkit-text-stroke: 5px;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}

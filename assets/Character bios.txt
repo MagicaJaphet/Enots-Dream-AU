@@ -1,0 +1,11 @@
+{The Messenger}
+[Image]
+[Colors]#615376,#ffffff,#ab321d
+[Titles]The Messenger, The Spearmaster, The Dragon Slayer
+[Name]Joyous Suns, Of the House of Eight Needles
+[Pronouns]He/It
+[Age]30
+[Height]190.50
+[Food]5|5
+[Personality]Quiet, stern, observant, subtle curiosity
+[Bio]This is a bunch of text, I'll add more later.<LINE>This is a line break in the style of RW!

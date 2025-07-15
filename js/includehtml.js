@@ -1,9 +1,8 @@
-function getBaseUrl(url) {
-    var result = url.hostname;
-    if (result.search("github") != -1 && url.href.search("Enots-Dream-AU") == -1) {
-        result += "Enots-Dream-AU";
+function getBaseUrl(base, url) {
+    if (base.includes("github") && !url.includes("Enots-Dream-AU")) {
+        base += "Enots-Dream-AU";
     }
-    return result + url.href.splice(url.hostname.length + 3);
+    return base + url.splice(3);
 }
 
 function fixURLs() {
@@ -15,7 +14,7 @@ function fixURLs() {
     /*search for elements with a certain atrribute:*/
     file = elmnt.getAttribute("href");
     if (file && file[0] == ".") {
-      z[i].href = getBaseUrl(file);
+      z[i].href = getBaseUrl(z[i].href, file);
     }
   }
 }

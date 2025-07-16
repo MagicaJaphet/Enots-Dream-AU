@@ -48,16 +48,17 @@ fetch("../assets/Character bios.txt")
                     let characterInfo = name.split("}")[1];
                     
                     // Auto generate HTML template for characters!!
-                    let container = createElement("div", "container-lg text-white row g-0", null, mainBody);
+                    let container = createElement("div", "container mx-auto mb-5 text-white row g-0", null, mainBody);
                     
-                    let characterContainer = createElement("div", "rounded-start-3 bg-dark col-4", null, container);
+                    let characterContainer = createElement("div", "rounded-start-3 bg-dark col-lg-4", null, container);
+                    let characterImage = createElement("div", "m-3", null, characterContainer);
                     let paletteContainer = createElement("div", "justify-content-center m-3 d-flex flex-wrap", null, characterContainer);
 
-                    let infoContainer = createElement("div", "col-8 d-flex flex-column", null, container);
+                    let infoContainer = createElement("div", "col-lg-8 d-flex flex-column", null, container);
                     let shortInfo = createElement("div", "p-2 rounded-end-3 bg-dark", null, infoContainer);
                     let list = createElement("ul", "list-style-none", null, shortInfo);
 
-                    let bio = createElement("div", "bg-dark mt-2 ms-2 rounded-2 p-4 flex-fill", null, infoContainer);
+                    let bio = createElement("div", "bg-dark mt-2 ms-md-2 rounded-2 p-4 flex-fill", null, infoContainer);
                     if (characterInfo.length > 0 && characterInfo.includes("[")) {
                         characterInfo.split("\n").forEach((infoString) => {
                             if (infoString != null && infoString.length > 0) {
@@ -66,6 +67,8 @@ fetch("../assets/Character bios.txt")
                                 if (info != null && info.length > 0) {
                                     switch(currentType) {
                                         case "Image":
+                                            let image = createElement("img", "img-fluid rounded-3", null, characterImage);
+                                            image.src = info;
                                             break;
     
                                         case "Colors":
@@ -130,13 +133,22 @@ fetch("../assets/Character bios.txt")
                                             break;
 
                                         case "Bio":
+                                            let innerBio = createElement("div", "d-flex", null, bio);
+                                            let imageElement = createElement("img", "border mx-auto", null, innerBio);
+                                            imageElement.src = "/assets/temp.png";
+                                            imageElement.style.width = "150px";
+                                            imageElement.style.height = "250px";
+                                            let textElement = createElement("div", "w-100 ps-4", null, innerBio);
+                                            let pClasses = "m-0 mb-3";
                                             if (info.includes("<LINE>")) {
                                                 info.split("<LINE>").forEach((line) => {
-                                                    createElement("p", "m-0", line, bio);
+                                                    let p = createElement("p", pClasses, "> " + line, textElement);
+                                                    p.style.fontSize = "3.5mm";
                                                 });
                                             }
                                             else {
-                                                bio.textContent = info;
+                                                let p = createElement("p", pClasses, "> " + info, textElement);
+                                                p.style.fontSize = "3.5mm";
                                             }
                                             break;
                                     }

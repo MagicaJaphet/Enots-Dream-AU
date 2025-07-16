@@ -1,5 +1,5 @@
 {The Messenger}
-[Image]
+[Image]https://lh3.googleusercontent.com/d/1ddoVLCP6exJ_76EzFU6enS0TMG2_EjV-
 [Colors]#615376,#ffffff,#ab321d
 [Titles]The Messenger, The Spearmaster, The Dragon Slayer
 [Name]Joyous Suns, Of the House of Eight Needles
@@ -8,4 +8,4 @@
 [Height]190.50
 [Food]5|5
 [Personality]Quiet, stern, observant, subtle curiosity
-[Bio]This is a bunch of text, I'll add more later.<LINE>This is a line break in the style of RW!
+[Bio]A biomechanical organism, born of corrupted plant tissue and lifted genomes from a local species.<LINE>Purposed to be a messenger, to traverse long distances and equipped to overcome most obstacles. Was only used a handful of times due to it's creator growing fond of it.<LINE>Stranded in most cycles in the local facility due to the surrounding walls, and one-ways which were used to get there.
